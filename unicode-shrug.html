@@ -11,6 +11,7 @@ Example:
     :host {
       display: block;
       font-weight: bold;
+      min-height: 25px;
       position: relative;
     }
 
@@ -25,20 +26,24 @@ Example:
       top: 0;
     }
 
-    #shrug {
+    #mid-shrug, #no-shrug {
+      visibility: hidden;
+    }
+
+    :host([animated]) #shrug {
       -moz-animation-name: shrug-animation;
       -webkit-animation-name: shrug-animation;
       animation-name: shrug-animation;
     }
 
-    #mid-shrug {
+    :host([animated]) #mid-shrug {
       -webkit-animation-name: mid-shrug-animation;
       -moz-animation-name: mid-shrug-animation;
       animation-name: mid-shrug-animation;
       visibility: hidden;
     }
 
-    #no-shrug {
+    :host([animated]) #no-shrug {
       -webkit-animation-name: no-shrug-animation;
       -moz-animation-name: no-shrug-animation;
       animation-name: no-shrug-animation;
@@ -195,6 +200,13 @@ Example:
 <script>
   Polymer({
     is: 'unicode-shrug',
+    properties: {
+      animated: {
+        type: Boolean,
+        value: false,
+        reflectToAttribute: true,
+      },
+    },
   });
 </script>
 
