@@ -15,23 +15,33 @@ Example:
     }
 
     div {
+      -moz-animation-duration: 2s;
+      -moz-animation-iteration-count: infinite;
       -webkit-animation-duration: 2s;
       -webkit-animation-iteration-count: infinite;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
       position: absolute;
       top: 0;
     }
 
     #shrug {
+      -moz-animation-name: shrug-animation;
       -webkit-animation-name: shrug-animation;
+      animation-name: shrug-animation;
     }
 
     #mid-shrug {
       -webkit-animation-name: mid-shrug-animation;
+      -moz-animation-name: mid-shrug-animation;
+      animation-name: mid-shrug-animation;
       visibility: hidden;
     }
 
     #no-shrug {
       -webkit-animation-name: no-shrug-animation;
+      -moz-animation-name: no-shrug-animation;
+      animation-name: no-shrug-animation;
       visibility: hidden;
     }
 
@@ -68,6 +78,98 @@ Example:
     }
 
     @keyframes no-shrug-animation {
+      0% {
+        visibility: visible;
+      }
+
+      24% {
+        visibility: visible;
+      }
+
+      25% {
+        visibility: hidden;
+      }
+    }
+
+    @-webkit-keyframes shrug-animation {
+      0% {
+        visibility: hidden;
+      }
+
+      50% {
+        visibility: hidden;
+      }
+
+      100% {
+        visibility: visible;
+      }
+    }
+
+    @-webkit-keyframes mid-shrug-animation {
+      0% {
+        visibility: hidden;
+      }
+
+      25% {
+        visibility: hidden;
+      }
+
+      49% {
+        visibility: visible;
+      }
+
+      50% {
+        visibility: hidden;
+      }
+    }
+
+    @-webkit-keyframes no-shrug-animation {
+      0% {
+        visibility: visible;
+      }
+
+      24% {
+        visibility: visible;
+      }
+
+      25% {
+        visibility: hidden;
+      }
+    }
+
+    @-moz-keyframes shrug-animation {
+      0% {
+        visibility: hidden;
+      }
+
+      50% {
+        visibility: hidden;
+      }
+
+      100% {
+        visibility: visible;
+      }
+    }
+
+    @-moz-keyframes mid-shrug-animation {
+      0% {
+        visibility: hidden;
+      }
+
+      25% {
+        visibility: hidden;
+      }
+
+      49% {
+        visibility: visible;
+      }
+
+      50% {
+        visibility: hidden;
+      }
+    }
+
+    @-moz-keyframes no-shrug-animation {
       0% {
         visibility: visible;
       }
