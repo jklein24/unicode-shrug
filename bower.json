@@ -1,0 +1,24 @@
+{
+  "name": "unicode-shrug",
+  "version": "0.0.0",
+  "authors": [
+    "Jeremy Klein <jklein24@gmail.com>"
+  ],
+  "description": "An element providing a solution to no problem in particular.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "shrug"
+  ],
+  "main": "unicode-shrug.html",
+  "license": "Apache",
+  "homepage": "https://github.com/jklein24/unicode-shrug",
+  "ignore": [
+    "/.*",
+    "/demo/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#v0.8.0-rc.7"
+  }
+}
