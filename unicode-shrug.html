@@ -11,11 +11,81 @@ Example:
     :host {
       display: block;
       font-weight: bold;
+      position: relative;
+    }
+
+    div {
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      position: absolute;
+      top: 0;
+    }
+
+    #shrug {
+      -webkit-animation-name: shrug-animation;
+    }
+
+    #mid-shrug {
+      -webkit-animation-name: mid-shrug-animation;
+      visibility: hidden;
+    }
+
+    #no-shrug {
+      -webkit-animation-name: no-shrug-animation;
+      visibility: hidden;
+    }
+
+    @keyframes shrug-animation {
+      0% {
+        visibility: hidden;
+      }
+
+      50% {
+        visibility: hidden;
+      }
+
+      100% {
+        visibility: visible;
+      }
+    }
+
+    @keyframes mid-shrug-animation {
+      0% {
+        visibility: hidden;
+      }
+
+      25% {
+        visibility: hidden;
+      }
+
+      49% {
+        visibility: visible;
+      }
+
+      50% {
+        visibility: hidden;
+      }
+    }
+
+    @keyframes no-shrug-animation {
+      0% {
+        visibility: visible;
+      }
+
+      24% {
+        visibility: visible;
+      }
+
+      25% {
+        visibility: hidden;
+      }
     }
   </style>
 
   <template>
-    <div>¯\_(ツ)_/¯</div>
+    <div id="shrug">¯\_(ツ)_/¯</div>
+    <div id="mid-shrug">-__(ツ)__-</div>
+    <div id="no-shrug">_/¯(ツ)¯\_</div>
   </template>
 
 </dom-module>
